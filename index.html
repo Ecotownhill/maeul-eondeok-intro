@@ -1,0 +1,703 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#24364b">
+  <title>일상을 지키는 마음, 내일을 여는 약속 | 마을언덕</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #24364b;
+      --coral: #e98270;
+      --cream: #fbf8f3;
+      --text: #333b43;
+      --muted: #69737d;
+      --line: #e9e4dd;
+      --white: #ffffff;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Pretendard", "Malgun Gothic", sans-serif;
+      line-height: 1.75;
+      word-break: keep-all;
+      background: var(--white);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--coral);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-title {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: clamp(27px, 4vw, 40px);
+      line-height: 1.35;
+      letter-spacing: -0.045em;
+    }
+
+    .section-desc {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .section-heading {
+      margin-bottom: 38px;
+    }
+
+    /* 상단 메뉴 */
+
+    .site-header {
+      position: relative;
+      z-index: 5;
+      background: var(--white);
+      border-bottom: 1px solid rgba(36, 54, 75, 0.08);
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .brand img {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+    }
+
+    .header-link {
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* 메인 영역 */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -120px;
+      bottom: -230px;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 40px rgba(255,255,255,0.035),
+        0 0 0 80px rgba(255,255,255,0.025);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding: 105px 0 100px;
+    }
+
+    .hero .eyebrow {
+      color: #f3a08f;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(38px, 6.5vw, 68px);
+      line-height: 1.25;
+      letter-spacing: -0.06em;
+      font-weight: 800;
+    }
+
+    .hero-copy {
+      max-width: 640px;
+      margin: 28px 0 0;
+      color: rgba(255,255,255,0.82);
+      font-size: clamp(16px, 2vw, 19px);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      padding: 13px 23px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: var(--white);
+      background: var(--coral);
+    }
+
+    .button-outline {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.35);
+    }
+
+    /* 소개 영역 */
+
+    .intro {
+      background: var(--cream);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .intro-copy p {
+      margin: 0 0 16px;
+    }
+
+    .intro-emphasis {
+      margin-top: 25px !important;
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .photo-placeholder {
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 28px;
+      text-align: center;
+      color: var(--navy);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(233,130,112,.18), transparent 35%),
+        linear-gradient(135deg, #eee6dc, #f8f4ee);
+      border-radius: 18px;
+    }
+
+    .photo-placeholder strong {
+      font-size: 18px;
+    }
+
+    .photo-placeholder span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .intro-photo {
+      min-height: 330px;
+      border-radius: 18px;
+      object-fit: cover;
+    }
+
+    /* 후원 필요성 */
+
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .reason-card {
+      padding: 30px 25px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--white);
+    }
+
+    .reason-number {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      color: var(--coral);
+      background: var(--cream);
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .reason-card h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 19px;
+      letter-spacing: -0.03em;
+    }
+
+    .reason-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* 참여 방법 */
+
+    .ways {
+      background: var(--cream);
+    }
+
+    .ways-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .way-card {
+      display: flex;
+      flex-direction: column;
+      padding: 34px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+
+    .way-label {
+      margin-bottom: 14px;
+      color: var(--coral);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .way-card h3 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 25px;
+      line-height: 1.4;
+      letter-spacing: -0.04em;
+    }
+
+    .way-card p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .way-points {
+      margin: 0 0 28px;
+      padding-left: 19px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .way-points li {
+      margin: 7px 0;
+    }
+
+    .way-card .button {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+    .button-dark {
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    /* 강조 문구 */
+
+    .closing {
+      padding: 86px 0;
+      text-align: center;
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .closing h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.4;
+      letter-spacing: -0.05em;
+    }
+
+    .closing p {
+      max-width: 650px;
+      margin: 20px auto 28px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* 하단 */
+
+    .site-footer {
+      padding: 28px 0;
+      color: var(--muted);
+      background: #f7f5f1;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px 24px;
+    }
+
+    @media (max-width: 760px) {
+      .section {
+        padding: 68px 0;
+      }
+
+      .header-inner {
+        min-height: 66px;
+      }
+
+      .brand {
+        font-size: 14px;
+      }
+
+      .brand img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .header-link {
+        font-size: 12px;
+      }
+
+      .hero-inner {
+        padding: 78px 0 74px;
+      }
+
+      .intro-grid,
+      .ways-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .reasons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-placeholder,
+      .intro-photo {
+        min-height: 240px;
+      }
+
+      .way-card {
+        padding: 27px 23px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 상단 메뉴 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="마을언덕 안내 페이지 처음으로">
+        <!-- 같은 폴더에 로고 파일을 넣으면 표시됩니다. -->
+        <img src="maeul-logo.png" alt="마을언덕 사회적협동조합 로고"
+             onerror="this.style.display='none'">
+        <span>마을언덕사회적협동조합</span>
+      </a>
+
+      <a class="header-link" href="#participate">후원 참여하기 ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 01. 캠페인 메인 -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">MAEUL EONDEOK FUNDRAISING CAMPAIGN</p>
+
+        <h1>일상을 지키는 마음,<br>내일을 여는 약속</h1>
+
+        <p class="hero-copy">
+          이웃이 만나고, 서로 돌보며, 생태적인 삶을 함께 실천하는 마을언덕.
+          여러분의 꾸준한 참여가 오늘의 활동을 이어가고
+          내일의 변화를 준비하는 힘이 됩니다.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#participate">
+            마을언덕과 함께하기
+          </a>
+          <a class="button button-outline" href="#about">
+            마을언덕 알아보기
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. 마을언덕 소개 -->
+    <section class="section intro" id="about">
+      <div class="container intro-grid">
+
+        <div class="intro-copy">
+          <p class="eyebrow">OUR EVERYDAY LIFE</p>
+          <h2 class="section-title">우리가 지키고 싶은 일상</h2>
+
+          <p>
+            사람들이 만나고, 서로의 안부를 살피고,
+            자연과 더불어 살아가는 방법을 함께 배우는 일.
+            마을언덕은 이웃과 지역이 연결되는 일상을 만들어갑니다.
+          </p>
+
+          <p>
+            이런 활동이 한 번의 행사로 끝나지 않고 꾸준히 이어지려면,
+            활동을 함께 지탱하는 안정적인 기반이 필요합니다.
+          </p>
+
+          <p class="intro-emphasis">
+            그 일상이 계속될 수 있도록,<br>
+            여러분의 마음을 보태주세요.
+          </p>
+        </div>
+
+        <!-- 실제 활동 사진으로 교체할 영역 -->
+        <div class="photo-placeholder" id="activityPhoto">
+          <strong>마을언덕의 실제 활동 사진</strong>
+          <span>아래 안내에 따라 사진 파일을 연결해 주세요.</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03. 후원이 필요한 이유 -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHY REGULAR SUPPORT?</p>
+          <h2 class="section-title">꾸준한 후원이 만드는 힘</h2>
+          <p class="section-desc">
+            매월 이어지는 후원은 마을언덕이 지금의 활동을 지키고,
+            새로운 가능성을 준비하는 데 힘이 됩니다.
+          </p>
+        </div>
+
+        <div class="reasons-grid">
+          <article class="reason-card">
+            <span class="reason-number">01</span>
+            <h3>오늘의 활동을 이어갑니다</h3>
+            <p>
+              공간을 운영하고 이웃이 만나며,
+              마을의 일상이 꾸준히 이어질 수 있도록 함께합니다.
+            </p>
+          </article>
+
+          <article class="reason-card">
+            <span class="reason-number">02</span>
+            <h3>내일의 변화를 준비합니다</h3>
+            <p>
+              중장기 사업을 계획하고,
+              지역에 필요한 새로운 활동을 준비할 수 있는 기반을 만듭니다.
+            </p>
+          </article>
+
+          <article class="reason-card">
+            <span class="reason-number">03</span>
+            <h3>함께하는 마음을 모읍니다</h3>
+            <p>
+              각자의 형편에 맞는 작은 참여가 모여
+              마을언덕의 활동을 지탱하는 힘이 됩니다.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. 후원 참여 방법 -->
+    <section class="section ways" id="participate">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">JOIN US</p>
+          <h2 class="section-title">함께하는 두 가지 방법</h2>
+          <p class="section-desc">
+            이미 함께하고 계신 분도, 이제 처음 만나는 분도
+            자신에게 맞는 방식으로 마을언덕과 함께할 수 있습니다.
+          </p>
+        </div>
+
+        <div class="ways-grid">
+
+          <article class="way-card">
+            <span class="way-label">01 · 기존 후원자와 함께</span>
+
+            <h3>정기후원 증액으로<br>일상 지키기</h3>
+
+            <p>
+              이미 마을언덕과 함께하고 계신다면,
+              지금의 정기후원에 마음을 조금 더 보태주세요.
+            </p>
+
+            <ul class="way-points">
+              <li>월 5,000원부터 추가 후원 참여</li>
+              <li>공간과 일상 활동의 안정적인 유지</li>
+              <li>마을언덕의 활동을 지속할 수 있는 기반 마련</li>
+            </ul>
+
+            <a class="button button-dark donation-link" href="#">
+              후원금 증액 신청하기 →
+            </a>
+          </article>
+
+          <article class="way-card">
+            <span class="way-label">02 · 새로운 후원자와 함께</span>
+
+            <h3>약정후원으로<br>내일 열기</h3>
+
+            <p>
+              마을언덕의 활동이 더 오래, 더 넓게 이어지기를 바란다면
+              새로운 정기후원이나 약정후원으로 함께해 주세요.
+            </p>
+
+            <ul class="way-points">
+              <li>신규 정기후원 시작</li>
+              <li>마을언덕의 내일을 위한 고액 정기후원</li>
+              <li>기업·법인 약정후원 문의</li>
+            </ul>
+
+            <a class="button button-dark donation-link" href="#">
+              후원 참여 방법 알아보기 →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. 마무리 -->
+    <section class="closing">
+      <div class="container">
+        <p class="eyebrow">OUR TOMORROW</p>
+
+        <h2>마음이 모이면,<br>마을의 내일이 자랍니다.</h2>
+
+        <p>
+          후원은 우리가 함께 만들어온 일상을 지키고
+          앞으로 필요한 변화를 준비하는 약속입니다.
+          여러분의 꾸준한 참여가 우리가 바라는 마을을 만들어갑니다.
+        </p>
+
+        <a class="button button-primary donation-link" href="#">
+          마을언덕과 함께하기 →
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>마을언덕사회적협동조합</span>
+      <span>일상을 지키는 마음, 내일을 여는 약속</span>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      아래 URL을 실제 후원 신청 페이지 주소로 바꿔주세요.
+      현재는 연결할 주소를 입력하지 않은 상태입니다.
+    */
+    const DONATION_PAGE_URL =
+      "https://parkseonghwi1-sketch.github.io/maeul-eondeok-campaign/";
+
+    document.querySelectorAll(".donation-link").forEach(function(link) {
+      link.href = DONATION_PAGE_URL;
+    });
+
+    /*
+      실제 활동 사진을 연결하려면 아래 PHOTO_FILE을 파일명으로 바꾸세요.
+      예: const PHOTO_FILE = "달리고살리고시작.jpg";
+      사진 파일은 이 HTML 파일과 같은 폴더에 있어야 합니다.
+    */
+    const PHOTO_FILE = "";
+
+    if (PHOTO_FILE) {
+      const photoBox = document.getElementById("activityPhoto");
+      const img = document.createElement("img");
+      img.src = PHOTO_FILE;
+      img.alt = "마을언덕의 실제 활동 모습";
+      img.className = "intro-photo";
+      img.onerror = function() {
+        photoBox.innerHTML =
+          "<strong>사진을 불러오지 못했습니다.</strong>" +
+          "<span>사진 파일명과 저장 위치를 확인해 주세요.</span>";
+      };
+      photoBox.replaceWith(img);
+    }
+  </script>
+
+</body>
+</html>
