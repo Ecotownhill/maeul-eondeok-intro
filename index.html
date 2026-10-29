@@ -89,6 +89,55 @@ img{display:block;max-width:100%}
 .impact-number{margin:auto 0 13px;color:var(--coral);font-size:clamp(30px,3vw,39px);line-height:1.2;letter-spacing:-.06em;font-weight:800}
 .impact-card p:last-child{margin:0;color:var(--muted);font-size:14px;line-height:1.85}
 
+
+/* 후원 캠페인 영상 */
+.campaign-video-section{
+  padding:96px 0;
+  background:var(--white);
+}
+
+.campaign-video-inner{
+  width:min(960px,calc(100% - 48px));
+  margin:0 auto;
+}
+
+.campaign-video-section .section-heading{
+  margin-bottom:38px;
+}
+
+.campaign-video-frame{
+  position:relative;
+  overflow:hidden;
+  aspect-ratio:16/9;
+  border-radius:22px;
+  background:#1c2a3a;
+  box-shadow:0 18px 42px rgba(36,54,75,.12);
+}
+
+.campaign-video-frame video{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  background:#1c2a3a;
+}
+
+.campaign-video-caption{
+  max-width:720px;
+  margin:22px auto 0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.9;
+  text-align:center;
+}
+
+.campaign-video-cta{
+  display:flex;
+  justify-content:center;
+  margin-top:26px;
+}
+
+  
 /* 기존 후원금의 쓰임 */
 .donation-use{padding:96px 0;background:var(--cream);color:var(--navy)}
 .donation-use-inner{max-width:780px;margin:0 auto}
@@ -158,6 +207,24 @@ img{display:block;max-width:100%}
 /* 모바일 */
 @media (max-width:800px){
 .section,.donation-use{padding:72px 0}
+
+.campaign-video-section{
+  padding:72px 0;
+}
+
+.campaign-video-inner{
+  width:calc(100% - 36px);
+}
+
+.campaign-video-frame{
+  border-radius:14px;
+}
+
+.campaign-video-caption{
+  font-size:14px;
+}
+
+  
 .hero-inner{grid-template-columns:1fr;gap:40px;padding:72px 0 64px}
 .carousel-stage{height:300px}
 .slide{width:68%}
@@ -303,6 +370,56 @@ img{display:block;max-width:100%}
   </section>
 
   <section class="donation-use" id="donation-use">
+
+  <!-- 후원 캠페인 영상 -->
+  <section class="campaign-video-section" id="campaign-video">
+    <div class="campaign-video-inner">
+
+      <div class="section-heading">
+        <p class="eyebrow">마을언덕의 이야기를 영상으로</p>
+        <h2>
+          우리의 일상은<br>
+          <span class="highlight">함께하는 마음으로 이어집니다</span>
+        </h2>
+        <p>
+          마을언덕과 함께해 온 사람들의 이야기를 만나보세요.<br>
+          여러분의 마음이 어떤 일상을 지키고,
+          어떤 내일을 여는지 전합니다.
+        </p>
+      </div>
+
+      <div class="campaign-video-frame">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          aria-label="마을언덕 정기후원 확대 캠페인 홍보 영상"
+        >
+          <source src="후원캠페인영상.mp4" type="video/mp4">
+          브라우저에서 영상을 재생할 수 없습니다.
+        </video>
+      </div>
+
+      <p class="campaign-video-caption">
+        마을언덕의 활동과 그 안에서 만들어지는 변화를 소개합니다.
+        함께하고 싶은 마음이 드셨다면 후원으로 동행해 주세요.
+      </p>
+
+      <div class="campaign-video-cta">
+        <a
+          class="button button-primary"
+          href="https://ecotownhill.github.io/maeul-eondeok-campaign/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          후원으로 함께하기 →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+    
     <div class="container donation-use-inner">
       <p class="section-eyebrow">기존 후원금의 쓰임</p>
       <h2>보내주신 후원금은<br><span>공간을 지키는 데 쓰였어요</span></h2>
