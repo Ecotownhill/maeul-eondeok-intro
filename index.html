@@ -31,17 +31,15 @@ img{display:block;max-width:100%}
 .header-cta{padding:12px 20px;border-radius:999px;color:var(--white);background:var(--navy);font-size:14px;font-weight:700;white-space:nowrap;transition:transform .2s,background .2s}
 .header-cta:hover{background:#344d68;transform:translateY(-2px)}
 
-/* 히어로 */
-.hero{position:relative;min-height:610px;display:flex;align-items:center;overflow:hidden;color:var(--white);background:var(--navy)}
-.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;opacity:0;transition:opacity .4s}
-.hero-photo.loaded{opacity:1}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,35,50,.88) 0%,rgba(20,35,50,.72) 48%,rgba(20,35,50,.28) 100%)}
-.hero-inner{position:relative;z-index:1;width:min(1120px,calc(100% - 48px));margin:0 auto;padding:100px 0}
+/* 맨 위: 글 + 사진 회전 */
+.hero{position:relative;display:flex;align-items:center;overflow:hidden;color:var(--white);background:var(--navy)}
+.hero-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:48px;align-items:center;width:min(1120px,calc(100% - 48px));margin:0 auto;padding:88px 0}
+.hero-text,.hero-carousel{min-width:0}
 .hero-label{display:inline-flex;align-items:center;gap:9px;margin:0 0 24px;color:#ffe0d7;font-size:14px;font-weight:700}
 .hero-label::before{content:"";width:26px;height:2px;background:var(--coral)}
-.hero h1{margin:0;max-width:760px;color:var(--white);font-size:clamp(38px,6vw,66px);line-height:1.3;letter-spacing:-.065em;font-weight:800}
+.hero h1{margin:0;color:var(--white);font-size:clamp(34px,4.8vw,54px);line-height:1.3;letter-spacing:-.065em;font-weight:800}
 .hero h1 span{color:#ffb3a2}
-.hero-description{max-width:650px;margin:26px 0 0;color:rgba(255,255,255,.9);font-size:clamp(16px,2vw,19px);line-height:1.9}
+.hero-description{max-width:560px;margin:26px 0 0;color:rgba(255,255,255,.9);font-size:clamp(16px,2vw,18px);line-height:1.9}
 .hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 .button{display:inline-flex;min-height:52px;align-items:center;justify-content:center;gap:8px;padding:14px 23px;border:1px solid transparent;border-radius:999px;font-size:15px;font-weight:700;text-align:center;transition:transform .2s,background .2s}
 .button:hover{transform:translateY(-2px)}
@@ -49,6 +47,20 @@ img{display:block;max-width:100%}
 .button-primary:hover{background:#d97260}
 .button-secondary{color:var(--white);border-color:rgba(255,255,255,.65);background:rgba(255,255,255,.08)}
 .button-secondary:hover{background:rgba(255,255,255,.16)}
+
+/* 사진 회전 */
+.carousel-stage{position:relative;height:380px}
+.slide{position:absolute;top:0;left:50%;width:62%;height:100%;margin:0;border-radius:20px;overflow:hidden;background:#1c2a3a;box-shadow:0 18px 40px rgba(0,0,0,.35);transform:translateX(-50%) scale(.6);opacity:0;z-index:0;pointer-events:none;transition:transform .6s ease,opacity .6s ease}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide[data-pos="0"]{transform:translateX(-50%) scale(1);opacity:1;z-index:3}
+.slide[data-pos="-1"]{transform:translateX(-103%) scale(.78);opacity:.55;z-index:2}
+.slide[data-pos="1"]{transform:translateX(3%) scale(.78);opacity:.55;z-index:2}
+.carousel-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px}
+.carousel-btn{width:40px;height:40px;border:1px solid rgba(255,255,255,.6);border-radius:50%;color:var(--white);background:rgba(255,255,255,.08);font-size:16px;cursor:pointer}
+.carousel-btn:hover{background:rgba(255,255,255,.2)}
+.carousel-dots{display:flex;gap:8px}
+.carousel-dot{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:width .3s,background .3s}
+.carousel-dot.active{width:26px;border-radius:999px;background:var(--coral)}
 
 /* 소개 */
 .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:start}
@@ -146,6 +158,9 @@ img{display:block;max-width:100%}
 /* 모바일 */
 @media (max-width:800px){
 .section,.donation-use{padding:72px 0}
+.hero-inner{grid-template-columns:1fr;gap:40px;padding:72px 0 64px}
+.carousel-stage{height:300px}
+.slide{width:68%}
 .about-grid{grid-template-columns:1fr;gap:24px}
 .values-grid{grid-template-columns:1fr;gap:14px}
 .value-card{min-height:auto}
@@ -159,12 +174,12 @@ img{display:block;max-width:100%}
 .brand img{width:40px;height:40px}
 .brand-name{font-size:13px}
 .header-cta{padding:10px 13px;font-size:12px}
-.hero{min-height:570px}
-.hero-inner{width:calc(100% - 36px);padding:80px 0}
-.hero h1{font-size:clamp(35px,10vw,47px)}
+.hero-inner{width:calc(100% - 36px);padding:64px 0 56px}
+.hero h1{font-size:clamp(34px,10vw,44px)}
 .hero-description{font-size:15px}
 .hero-buttons{flex-direction:column;align-items:stretch;max-width:280px}
 .button{width:100%}
+.carousel-stage{height:260px}
 .section-heading{margin-bottom:32px}
 .section-heading>p:last-child{font-size:15px}
 .impact-grid,.participate-grid{grid-template-columns:1fr}
@@ -202,15 +217,33 @@ img{display:block;max-width:100%}
 <main id="top">
 
   <section class="hero">
-    <img class="hero-photo" src="달리고살리고시작.jpg" alt="마을언덕의 활동 모습" fetchpriority="high">
     <div class="hero-inner">
-      <p class="hero-label">2026 정기후원 확대 캠페인 · 10.28 – 02.28</p>
-      <h1>일상을 지키는 마음,<br><span>내일을 여는 약속</span></h1>
-      <p class="hero-description">이웃이 만나고, 서로 돌보며,<br>생태적인 삶을 함께 실천하는 마을언덕.<br>여러분의 꾸준한 참여가 오늘의 활동을 이어가고<br>내일의 변화를 준비하는 힘이 됩니다.</p>
-      <div class="hero-buttons">
-        <a class="button button-primary" href="https://ecotownhill.github.io/maeul-eondeok-campaign/" target="_blank" rel="noopener noreferrer">후원으로 함께하기 →</a>
-        <a class="button button-secondary" href="#about">마을언덕 알아보기</a>
+
+      <div class="hero-text">
+        <p class="hero-label">2026 정기후원 확대 캠페인 · 10.28 – 02.28</p>
+        <h1>일상을 지키는 마음,<br><span>내일을 여는 약속</span></h1>
+        <p class="hero-description">이웃이 만나고, 서로 돌보며,<br>생태적인 삶을 함께 실천하는 마을언덕.<br>여러분의 꾸준한 참여가 오늘의 활동을 이어가고<br>내일의 변화를 준비하는 힘이 됩니다.</p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="https://ecotownhill.github.io/maeul-eondeok-campaign/" target="_blank" rel="noopener noreferrer">후원으로 함께하기 →</a>
+          <a class="button button-secondary" href="#about">마을언덕 알아보기</a>
+        </div>
       </div>
+
+      <div class="hero-carousel" aria-label="마을언덕 활동 사진">
+        <div class="carousel-stage">
+          <figure class="slide"><img src="활동사진1.jpg" alt="활동 사진 1 설명을 적어주세요"></figure>
+          <figure class="slide"><img src="활동사진2.jpg" alt="활동 사진 2 설명을 적어주세요"></figure>
+          <figure class="slide"><img src="활동사진3.jpg" alt="활동 사진 3 설명을 적어주세요"></figure>
+          <figure class="slide"><img src="활동사진4.jpg" alt="활동 사진 4 설명을 적어주세요"></figure>
+          <figure class="slide"><img src="활동사진5.jpg" alt="활동 사진 5 설명을 적어주세요"></figure>
+        </div>
+        <div class="carousel-controls">
+          <button type="button" class="carousel-btn" data-dir="-1" aria-label="이전 사진">←</button>
+          <div class="carousel-dots"></div>
+          <button type="button" class="carousel-btn" data-dir="1" aria-label="다음 사진">→</button>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -383,11 +416,65 @@ img{display:block;max-width:100%}
 </footer>
 
 <script>
-document.querySelectorAll(".hero-photo").forEach(function (photo) {
-  function showPhoto() { photo.classList.add("loaded"); }
-  if (photo.complete && photo.naturalWidth > 0) { showPhoto(); }
-  else { photo.addEventListener("load", showPhoto); }
-});
+(function () {
+  var root = document.querySelector(".hero-carousel");
+  if (!root) return;
+
+  var slides = [].slice.call(root.querySelectorAll(".slide"));
+  var dotsBox = root.querySelector(".carousel-dots");
+  var n = slides.length, cur = 0, timer = null;
+
+  var dots = slides.map(function (_, i) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "carousel-dot";
+    b.setAttribute("aria-label", (i + 1) + "번째 사진 보기");
+    b.addEventListener("click", function () { go(i); restart(); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  function render() {
+    slides.forEach(function (s, i) {
+      var d = ((i - cur) % n + n) % n;
+      if (d > n / 2) d -= n;
+      s.dataset.pos = Math.abs(d) <= 1 ? d : "hide";
+      s.setAttribute("aria-hidden", d !== 0);
+    });
+    dots.forEach(function (b, i) { b.classList.toggle("active", i === cur); });
+  }
+
+  function go(i) { cur = (i + n) % n; render(); }
+  function stop() { clearInterval(timer); timer = null; }
+  function start() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    stop();
+    timer = setInterval(function () { go(cur + 1); }, 4000);
+  }
+  function restart() { stop(); start(); }
+
+  root.querySelectorAll(".carousel-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      go(cur + Number(btn.dataset.dir));
+      restart();
+    });
+  });
+
+  root.addEventListener("mouseenter", stop);
+  root.addEventListener("mouseleave", start);
+  root.addEventListener("focusin", stop);
+  root.addEventListener("focusout", start);
+
+  var startX = 0;
+  root.addEventListener("touchstart", function (e) { startX = e.touches[0].clientX; }, { passive: true });
+  root.addEventListener("touchend", function (e) {
+    var dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) { go(cur + (dx < 0 ? 1 : -1)); restart(); }
+  }, { passive: true });
+
+  render();
+  start();
+})();
 </script>
 
 </body>
