@@ -7,10 +7,7 @@
   <meta name="theme-color" content="#24364b">
 
   <title>일상을 지키는 마음, 내일을 여는 약속 | 마을언덕</title>
-  <meta
-    name="description"
-    content="이웃이 만나고, 서로 돌보며, 생태적인 삶을 함께 실천하는 마을언덕. 정기후원으로 오늘의 활동과 내일의 변화를 함께 만들어 주세요."
-  >
+  <meta name="description" content="주민의 힘으로 만드는 지속가능한 마을, 마을언덕. 우리가 함께 만들어 온 변화와 후원 참여 방법을 소개합니다.">
 
   <style>
     :root {
@@ -39,13 +36,8 @@
       margin: 0;
       color: var(--text);
       background: var(--cream);
-      font-family:
-        Pretendard,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Noto Sans KR",
-        sans-serif;
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Noto Sans KR", sans-serif;
       line-height: 1.75;
       word-break: keep-all;
     }
@@ -57,11 +49,6 @@
     img {
       display: block;
       max-width: 100%;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
     }
 
     .container {
@@ -78,20 +65,20 @@
       color: var(--coral);
       font-size: 13px;
       font-weight: 800;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.13em;
     }
 
     .section-title {
       margin: 0;
       color: var(--navy);
       font-size: clamp(29px, 4vw, 43px);
-      font-weight: 800;
+      font-weight: 850;
       letter-spacing: -0.045em;
-      line-height: 1.35;
+      line-height: 1.4;
     }
 
     .section-desc {
-      max-width: 660px;
+      max-width: 720px;
       margin: 18px 0 0;
       color: var(--muted);
       font-size: 16px;
@@ -150,18 +137,15 @@
       background: var(--navy);
     }
 
-    /* 메인 비주얼 */
+    /* 메인 화면 */
 
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 105px 0 95px;
+      padding: 100px 0 90px;
       background:
-        radial-gradient(
-          circle at 88% 12%,
-          rgba(233, 130, 112, 0.15),
-          transparent 30%
-        ),
+        radial-gradient(circle at 88% 12%,
+          rgba(233, 130, 112, 0.15), transparent 30%),
         linear-gradient(135deg, #fbf8f3 0%, #f7f0e7 100%);
     }
 
@@ -205,7 +189,7 @@
       font-size: clamp(38px, 5.2vw, 63px);
       font-weight: 850;
       letter-spacing: -0.065em;
-      line-height: 1.27;
+      line-height: 1.3;
     }
 
     .hero h1 span {
@@ -229,21 +213,18 @@
 
     .button {
       display: inline-flex;
-      min-height: 52px;
+      min-height: 50px;
       align-items: center;
       justify-content: center;
       gap: 9px;
-      padding: 13px 23px;
+      padding: 12px 22px;
       border: 1px solid transparent;
       border-radius: 999px;
       text-align: center;
       text-decoration: none;
       font-size: 14px;
       font-weight: 800;
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        color 0.2s ease;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
     .button:hover {
@@ -262,7 +243,7 @@
     .button-secondary {
       color: var(--navy);
       border-color: rgba(36, 54, 75, 0.23);
-      background: rgba(255, 255, 255, 0.48);
+      background: rgba(255, 255, 255, 0.65);
     }
 
     .button-secondary:hover {
@@ -296,18 +277,7 @@
       padding: 30px;
       color: #7c817f;
       text-align: center;
-      background:
-        radial-gradient(
-          circle at 50% 30%,
-          rgba(255, 255, 255, 0.85),
-          transparent 55%
-        ),
-        #e8e0d5;
-    }
-
-    .photo-placeholder .placeholder-icon {
-      margin-bottom: 12px;
-      font-size: 42px;
+      background: #e8e0d5;
     }
 
     .photo-placeholder strong {
@@ -334,122 +304,245 @@
       bottom: 18px;
       left: 18px;
       padding: 14px 18px;
-      border: 1px solid rgba(255, 255, 255, 0.65);
       border-radius: 14px;
       color: var(--navy);
-      background: rgba(255, 255, 255, 0.91);
+      background: rgba(255, 255, 255, 0.92);
       font-size: 12px;
       font-weight: 700;
-      backdrop-filter: blur(8px);
     }
 
     /* 마을언덕 소개 */
 
-    .intro-section {
+    .about-section {
+      padding: 100px 0;
       background: white;
     }
 
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      align-items: start;
-      gap: 70px;
+    .about-heading {
+      max-width: 850px;
+      margin-bottom: 35px;
     }
 
-    .intro-heading {
-      position: sticky;
-      top: 30px;
+    .about-heading .question {
+      margin: 0 0 12px;
+      color: var(--coral);
+      font-size: 17px;
+      font-weight: 800;
     }
 
-    .intro-copy {
-      padding-top: 8px;
+    .about-heading h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(30px, 4.5vw, 47px);
+      font-weight: 850;
+      letter-spacing: -0.055em;
+      line-height: 1.4;
     }
 
-    .intro-copy p {
-      margin: 0 0 22px;
+    .about-heading h2 span {
+      color: var(--coral);
+    }
+
+    .about-description {
+      max-width: 830px;
+      margin: 0;
       color: #58636d;
       font-size: 17px;
       line-height: 2;
     }
 
-    .intro-copy strong {
+    .cooperative-box {
+      display: grid;
+      grid-template-columns: 0.65fr 1.35fr;
+      align-items: center;
+      gap: 28px;
+      margin-top: 42px;
+      padding: 30px 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--cream);
+    }
+
+    .cooperative-question {
+      margin: 0;
+      color: var(--navy);
+      font-size: 23px;
+      font-weight: 850;
+      letter-spacing: -0.04em;
+    }
+
+    .cooperative-answer {
+      margin: 0;
+      color: #58636d;
+      font-size: 15px;
+      line-height: 1.95;
+    }
+
+    .cooperative-answer strong {
       color: var(--navy);
     }
 
-    .intro-quote {
-      margin-top: 32px;
-      padding: 25px 28px;
-      border-left: 4px solid var(--coral);
-      border-radius: 0 14px 14px 0;
-      color: var(--navy);
+    /* 핵심 가치 */
+
+    .values-section {
+      padding: 0 0 100px;
+      background: white;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .value-card {
+      min-height: 185px;
+      padding: 27px;
+      border-radius: 18px;
       background: var(--cream);
-      font-size: 19px;
+    }
+
+    .value-card:nth-child(2) {
+      background: #f6eeea;
+    }
+
+    .value-card:nth-child(3) {
+      background: #edf1e9;
+    }
+
+    .value-label {
+      display: inline-block;
+      margin-bottom: 13px;
+      color: var(--coral);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+    }
+
+    .value-card h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 23px;
+      font-weight: 850;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: #626c76;
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    /* 지역에서 만들어 온 가치 */
+
+    .achievements-section {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+
+    .achievements-heading {
+      margin-bottom: 42px;
+    }
+
+    .achievements-heading .small-heading {
+      margin: 0 0 12px;
+      color: var(--coral);
+      font-size: 15px;
       font-weight: 800;
-      line-height: 1.7;
     }
 
-    /* 후원이 만드는 변화 */
-
-    .impact-section {
-      background: var(--cream);
+    .achievements-heading h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(30px, 4.3vw, 45px);
+      font-weight: 850;
+      letter-spacing: -0.05em;
+      line-height: 1.4;
     }
 
-    .section-heading {
-      margin-bottom: 40px;
+    .achievements-heading .section-desc {
+      margin-top: 16px;
     }
 
-    .impact-grid {
+    .achievement-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
     }
 
-    .impact-card {
-      padding: 30px 26px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: white;
-      box-shadow: 0 6px 22px rgba(36, 54, 75, 0.035);
-    }
-
-    .impact-icon {
+    .achievement-card {
+      position: relative;
       display: flex;
-      width: 52px;
-      height: 52px;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 21px;
-      border-radius: 16px;
-      color: var(--navy);
-      background: #edf0f2;
-      font-size: 25px;
+      min-height: 285px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 27px 25px;
+      overflow: hidden;
+      border: 1px solid #e8e1d8;
+      border-radius: 20px;
+      background: white;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .impact-card:nth-child(2) .impact-icon {
-      color: #a85c4d;
-      background: #f9e9e4;
+    .achievement-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
     }
 
-    .impact-card:nth-child(3) .impact-icon {
-      color: var(--green);
-      background: #eaf0e7;
+    .achievement-card::after {
+      position: absolute;
+      top: -36px;
+      right: -36px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid rgba(36, 54, 75, 0.07);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
     }
 
-    .impact-card h3 {
-      margin: 0 0 12px;
+    .achievement-index {
+      margin-bottom: 12px;
+      color: var(--coral);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+    }
+
+    .achievement-card h3 {
+      margin: 0;
       color: var(--navy);
       font-size: 19px;
-      letter-spacing: -0.03em;
+      font-weight: 850;
+      letter-spacing: -0.035em;
+      line-height: 1.55;
     }
 
-    .impact-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
+    .achievement-number {
+      margin: 20px 0 13px;
+      color: var(--coral);
+      font-size: clamp(30px, 3vw, 40px);
+      font-weight: 900;
+      letter-spacing: -0.055em;
+      line-height: 1.25;
+    }
+
+    .achievement-card:nth-child(2) .achievement-number,
+    .achievement-card:nth-child(4) .achievement-number,
+    .achievement-card:nth-child(6) .achievement-number {
+      color: var(--green);
+    }
+
+    .achievement-description {
+      margin: auto 0 0;
+      padding-top: 12px;
+      color: #626c76;
+      font-size: 13px;
       line-height: 1.9;
+      white-space: normal;
     }
 
-    /* 네 가지 후원 방식 */
+    /* 후원 참여 방식 */
 
     .ways-section {
       padding: 100px 0;
@@ -458,6 +551,7 @@
 
     .ways-section .section-heading {
       max-width: 760px;
+      margin-bottom: 40px;
     }
 
     .ways-grid {
@@ -467,36 +561,20 @@
     }
 
     .way-card {
-      position: relative;
       display: flex;
-      min-height: 315px;
+      min-height: 300px;
       flex-direction: column;
       align-items: flex-start;
-      padding: 32px;
-      overflow: hidden;
+      padding: 31px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: #fff;
-      transition:
-        transform 0.22s ease,
-        box-shadow 0.22s ease;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
     }
 
     .way-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow);
-    }
-
-    .way-card::after {
-      position: absolute;
-      right: -28px;
-      bottom: -38px;
-      width: 120px;
-      height: 120px;
-      border: 1px solid rgba(36, 54, 75, 0.06);
-      border-radius: 50%;
-      content: "";
-      pointer-events: none;
     }
 
     .way-card:nth-child(1) {
@@ -515,37 +593,30 @@
       background: linear-gradient(145deg, #fff 65%, #edf2e9);
     }
 
-    .way-top {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
     .way-number {
       color: var(--coral);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 900;
       letter-spacing: 0.1em;
     }
 
     .way-symbol {
       display: flex;
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
       align-items: center;
       justify-content: center;
-      border-radius: 15px;
+      margin-top: 16px;
+      border-radius: 14px;
       color: var(--navy);
-      background: rgba(255, 255, 255, 0.78);
-      font-size: 23px;
+      background: rgba(255, 255, 255, 0.8);
+      font-size: 22px;
     }
 
     .way-card h3 {
-      margin: 20px 0 10px;
+      margin: 17px 0 10px;
       color: var(--navy);
-      font-size: clamp(19px, 2vw, 23px);
+      font-size: 21px;
       font-weight: 850;
       letter-spacing: -0.04em;
       line-height: 1.5;
@@ -559,21 +630,10 @@
     }
 
     .way-card .button {
-      position: relative;
-      z-index: 1;
-      min-height: 46px;
       margin-top: auto;
+      min-height: 46px;
       padding: 10px 17px;
       font-size: 13px;
-    }
-
-    .way-card .button-secondary {
-      border-color: rgba(36, 54, 75, 0.2);
-      background: rgba(255, 255, 255, 0.75);
-    }
-
-    .way-card .button-secondary:hover {
-      background: white;
     }
 
     /* 마지막 후원 요청 */
@@ -608,7 +668,7 @@
     .closing-section p {
       max-width: 650px;
       margin: 20px 0 0;
-      color: rgba(255, 255, 255, 0.76);
+      color: rgba(255, 255, 255, 0.78);
       font-size: 15px;
       line-height: 1.9;
     }
@@ -627,7 +687,7 @@
 
     .site-footer {
       padding: 28px 0;
-      color: #78818a;
+      color: #aeb7c0;
       background: #1b2b3d;
       font-size: 12px;
     }
@@ -641,12 +701,12 @@
     }
 
     .footer-name {
-      color: rgba(255, 255, 255, 0.9);
+      color: white;
       font-weight: 800;
     }
 
     .footer-link {
-      color: rgba(255, 255, 255, 0.75);
+      color: rgba(255, 255, 255, 0.78);
       text-decoration: none;
     }
 
@@ -655,83 +715,46 @@
       text-decoration: underline;
     }
 
-    /* 반응형 */
+    /* 태블릿 */
 
-    @media (max-width: 850px) {
-      .section {
-        padding: 76px 0;
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr 0.9fr;
+        gap: 30px;
+      }
+
+      .hero-photo {
+        min-height: 330px;
+      }
+
+      .achievement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .intro-description {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .section,
+      .about-section,
+      .achievements-section,
+      .ways-section {
+        padding: 72px 0;
       }
 
       .hero {
-        padding: 75px 0;
+        padding: 60px 0;
       }
 
       .hero-inner {
         grid-template-columns: 1fr;
-        gap: 38px;
-      }
-
-      .hero-photo {
-        min-height: 360px;
-      }
-
-      .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .intro-heading {
-        position: static;
-      }
-
-      .impact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .impact-card {
-        padding: 25px;
-      }
-
-      .closing-inner {
-        grid-template-columns: 1fr;
-        align-items: start;
-      }
-
-      .closing-inner .button {
-        justify-self: start;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        width: min(100% - 32px, 1120px);
-      }
-
-      .header-inner {
-        min-height: 68px;
-      }
-
-      .brand {
-        gap: 8px;
-        font-size: 13px;
-      }
-
-      .brand img {
-        width: 38px;
-        height: 38px;
-      }
-
-      .header-link {
-        padding: 8px 12px;
-        font-size: 11px;
-      }
-
-      .hero {
-        padding: 60px 0 55px;
+        gap: 34px;
       }
 
       .hero h1 {
-        font-size: clamp(35px, 10vw, 46px);
+        font-size: clamp(36px, 9vw, 48px);
       }
 
       .hero-description {
@@ -743,30 +766,41 @@
         align-items: stretch;
       }
 
-      .hero-actions .button {
-        width: 100%;
-      }
-
       .hero-photo {
-        min-height: 300px;
-        border-radius: 42% 42% 18px 18px;
+        min-height: 310px;
       }
 
-      .section-title {
-        font-size: 30px;
+      .cooperative-box {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 24px;
       }
 
-      .intro-copy p {
-        font-size: 15px;
+      .values-section {
+        padding-bottom: 72px;
       }
 
-      .intro-quote {
-        padding: 20px;
-        font-size: 17px;
+      .values-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
       }
 
-      .ways-section {
-        padding: 70px 0;
+      .value-card {
+        min-height: auto;
+      }
+
+      .achievement-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .achievement-card {
+        min-height: 245px;
+        padding: 25px;
+      }
+
+      .achievement-number {
+        font-size: 36px;
       }
 
       .ways-grid {
@@ -775,8 +809,17 @@
       }
 
       .way-card {
-        min-height: 285px;
+        min-height: 280px;
         padding: 25px;
+      }
+
+      .closing-inner {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .closing-inner .button {
+        justify-self: start;
       }
 
       .closing-section {
@@ -790,6 +833,44 @@
       .footer-inner {
         flex-direction: column;
         align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .header-inner {
+        min-height: 66px;
+      }
+
+      .brand {
+        gap: 8px;
+        font-size: 12px;
+      }
+
+      .brand img {
+        width: 35px;
+        height: 35px;
+      }
+
+      .header-link {
+        padding: 8px 10px;
+        font-size: 11px;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      .section-title {
+        font-size: 29px;
+      }
+
+      .about-heading h2,
+      .achievements-heading h2 {
+        font-size: 31px;
       }
     }
 
@@ -821,10 +902,8 @@
         <span>마을언덕 사회적협동조합</span>
       </a>
 
-      <a
-        class="header-link donation-link"
-        href="https://ecotownhill.github.io/maeul-eondeok-campaign/"
-      >
+      <a class="header-link donation-link"
+         href="https://ecotownhill.github.io/maeul-eondeok-campaign/">
         후원 참여하기 ↗
       </a>
     </div>
@@ -832,7 +911,7 @@
 
   <main id="top">
 
-    <!-- 메인 비주얼 -->
+    <!-- 1. 메인 화면 -->
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
@@ -846,7 +925,7 @@
           <p class="hero-description">
             이웃이 만나고, 서로 돌보며,<br>
             생태적인 삶을 함께 실천하는 마을언덕.<br>
-            여러분의 마음이 오늘의 활동을 이어가고<br>
+            여러분의 꾸준한 참여가 오늘의 활동을 이어가고<br>
             내일의 변화를 준비하는 힘이 됩니다.
           </p>
 
@@ -855,10 +934,8 @@
               함께하는 방법 알아보기 ↓
             </a>
 
-            <a
-              class="button button-secondary donation-link"
-              href="https://ecotownhill.github.io/maeul-eondeok-campaign/"
-            >
+            <a class="button button-secondary donation-link"
+               href="https://ecotownhill.github.io/maeul-eondeok-campaign/">
               후원 신청하기 ↗
             </a>
           </div>
@@ -868,7 +945,6 @@
           <img src="달리고살리고시작.jpg" alt="마을언덕의 실제 활동 모습">
 
           <div class="photo-placeholder">
-            <div class="placeholder-icon" aria-hidden="true">🌿</div>
             <strong>마을언덕의 실제 활동 사진</strong>
             <span>달리고살리고시작.jpg 파일을 같은 폴더에 넣어 주세요.</span>
           </div>
@@ -880,95 +956,176 @@
       </div>
     </section>
 
-    <!-- 마을언덕 소개 -->
-    <section class="section intro-section">
-      <div class="container intro-grid">
-        <div class="intro-heading">
-          <p class="eyebrow">ABOUT MAEUL EONDEOK</p>
-          <h2 class="section-title">
-            우리가 함께하는<br>
-            마을의 일상
-          </h2>
-        </div>
-
-        <div class="intro-copy">
-          <p>
-            마을언덕은 <strong>이웃이 만나고, 서로 돌보며,
-            생태적인 삶을 함께 실천하는 마을</strong>을 만들어 갑니다.
-          </p>
-
-          <p>
-            사람과 사람이 연결되고, 일상 속 작은 실천이 이어질 때
-            우리가 바라는 마을도 조금씩 현실이 됩니다.
-            그 변화는 특별한 한 번의 행동만으로 이루어지지 않습니다.
-          </p>
-
-          <p>
-            꾸준히 이어지는 만남과 활동, 그리고 새로운 시도를
-            가능하게 하는 것은 마을언덕을 믿고 함께해 주는 사람들의 마음입니다.
-          </p>
-
-          <div class="intro-quote">
-            함께할 수 있는 방식으로 마음을 보태주세요.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 후원이 필요한 이유 -->
-    <section class="section impact-section">
+    <!-- 2. 마을언덕은 어떤 곳인가요? -->
+    <section class="about-section">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">WHY REGULAR SUPPORT</p>
-          <h2 class="section-title">
-            꾸준한 후원이 만드는 힘
+        <div class="about-heading">
+          <p class="question">마을언덕사회적협동조합은 어떤 곳인가요?</p>
+
+          <h2>
+            주민의 힘으로 만드는<br>
+            <span>지속가능한 마을, 마을언덕</span>
           </h2>
-          <p class="section-desc">
-            정기적인 후원은 지금의 활동을 지키고,
-            앞으로 필요한 일을 준비할 수 있는 기반이 됩니다.
-          </p>
         </div>
 
-        <div class="impact-grid">
-          <article class="impact-card">
-            <div class="impact-icon" aria-hidden="true">🏡</div>
-            <h3>오늘의 일상을 지킵니다</h3>
-            <p>
-              공간 운영과 일상 활동을 안정적으로 이어가고,
-              이웃들이 만나고 연결되는 자리를 지켜 나갑니다.
-            </p>
-          </article>
+        <p class="about-description">
+          서울 서대문구 홍은동에서 주민들이 함께 만든 사회적협동조합입니다.
+          주민공동체공간 '숨'을 거점으로 이웃이 만나고, 돌보고,
+          생태적인 일상을 함께 실천합니다.
+          주민의 힘으로 만드는 지역거점조직 모델을 창조하고 있습니다.
+        </p>
 
-          <article class="impact-card">
-            <div class="impact-icon" aria-hidden="true">🌱</div>
-            <h3>새로운 가능성을 준비합니다</h3>
-            <p>
-              마을에 필요한 새로운 사업과 활동을 구상하고,
-              작은 아이디어가 실제 변화로 이어지도록 준비합니다.
-            </p>
-          </article>
+        <div class="cooperative-box">
+          <h3 class="cooperative-question">사회적협동조합이란?</h3>
 
-          <article class="impact-card">
-            <div class="impact-icon" aria-hidden="true">🤝</div>
-            <h3>함께할 수 있는 기반을 만듭니다</h3>
-            <p>
-              예측 가능한 재정 기반을 마련해 중장기 계획을 세우고,
-              마을언덕의 활동을 지속할 수 있도록 힘을 보탭니다.
-            </p>
-          </article>
+          <p class="cooperative-answer">
+            <strong>조합원이 함께 주인이 되어 운영하고,</strong>
+            이윤보다 지역의 공익을 먼저 생각하는 비영리 협동조합이에요.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- 네 가지 후원 방식 -->
+    <!-- 3. 마을언덕의 세 가지 가치 -->
+    <section class="values-section">
+      <div class="container">
+        <div class="values-grid">
+
+          <article class="value-card">
+            <span class="value-label">VALUE 01</span>
+            <h3>생태</h3>
+            <p>일상에서 실천하는 생태 공동체</p>
+          </article>
+
+          <article class="value-card">
+            <span class="value-label">VALUE 02</span>
+            <h3>서로돌봄</h3>
+            <p>아이부터 어르신까지 돌봄 관계망</p>
+          </article>
+
+          <article class="value-card">
+            <span class="value-label">VALUE 03</span>
+            <h3>성평등</h3>
+            <p>차별 없는 회복적인 일상</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 지역에서 만들어 온 가치와 성과 -->
+    <section class="achievements-section">
+      <div class="container">
+        <div class="achievements-heading">
+          <p class="small-heading">MAEUL EONDEOK IN OUR COMMUNITY</p>
+
+          <h2>
+            지역에서 만들어 온 가치,<br>
+            마을에서 함께 만든 작지만 분명한 변화
+          </h2>
+
+          <p class="section-desc">
+            주민과 함께 실천하고 쌓아 온 활동을 소개합니다.
+          </p>
+        </div>
+
+        <div class="achievement-grid">
+
+          <!-- 01 골목길 자원순환거점 -->
+          <article class="achievement-card">
+            <span class="achievement-index">01 / RESOURCE CIRCULATION</span>
+            <h3>골목길 자원순환거점</h3>
+
+            <div class="achievement-number">10만 장 +</div>
+
+            <p class="achievement-description">
+              종이팩 수거<br>
+              연 3,000명 이상 주민 참여<br>
+              종이팩 조례 제정 기여(22년 ~ 현재)
+            </p>
+          </article>
+
+          <!-- 02 자원순환으로 줄인 탄소 -->
+          <article class="achievement-card">
+            <span class="achievement-index">02 / CARBON REDUCTION</span>
+            <h3>자원순환으로 줄인 탄소</h3>
+
+            <div class="achievement-number">약 7톤</div>
+
+            <p class="achievement-description">
+              플라스틱뚜껑, 종이팩, 브리타정수기필터 수거로
+              탄소감축량 약 7,116kg(22년 현재)
+            </p>
+          </article>
+
+          <!-- 03 장소 기반 환경교육 -->
+          <article class="achievement-card">
+            <span class="achievement-index">03 / ECO EDUCATION</span>
+            <h3>장소 기반 환경교육</h3>
+
+            <div class="achievement-number">약 10,000명</div>
+
+            <p class="achievement-description">
+              출강 700시간 이상<br>
+              교제 14종 · 교구 10종<br>
+              (22년 ~ 현재)
+            </p>
+          </article>
+
+          <!-- 04 마을환경강사 양성 -->
+          <article class="achievement-card">
+            <span class="achievement-index">04 / LOCAL GREEN JOBS</span>
+            <h3>마을환경강사 양성</h3>
+
+            <div class="achievement-number">38명</div>
+
+            <p class="achievement-description">
+              주민이 강사가 되어 지역 녹색일자리로
+              지역사회의 환경지킴이로<br>
+              (23년 ~ 26년)
+            </p>
+          </article>
+
+          <!-- 05 이야기밥상 -->
+          <article class="achievement-card">
+            <span class="achievement-index">05 / COMMUNITY CARE</span>
+            <h3>소셜다이닝 '이야기밥상'</h3>
+
+            <div class="achievement-number">연 100여 명</div>
+
+            <p class="achievement-description">
+              매월 둘러앉아 나누는 서로돌봄
+            </p>
+          </article>
+
+          <!-- 06 달리고살리고 -->
+          <article class="achievement-card">
+            <span class="achievement-index">06 / WALK & DONATE</span>
+            <h3>나와 지역을 함께 돌보는 '달리고살리고'</h3>
+
+            <div class="achievement-number">82명<br>1000만보</div>
+
+            <p class="achievement-description">
+              함께 걷고 미션 성공 기부금으로 지역기관에 기부
+              (2026년 신규사업)
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 네 가지 후원 방식 -->
     <section class="ways-section" id="donation-ways">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">JOIN MAEUL EONDEOK</p>
+
           <h2 class="section-title">
             마을언덕과 함께하는<br>
             네 가지 방법
           </h2>
+
           <p class="section-desc">
             지금의 일상을 지키고, 우리가 바라는 마을의 내일을 함께 만들어 주세요.
             각자에게 맞는 방식으로 마음을 보탤 수 있습니다.
@@ -977,12 +1134,9 @@
 
         <div class="ways-grid">
 
-          <!-- 01 기존 후원금 증액 -->
           <article class="way-card">
-            <div class="way-top">
-              <span class="way-number">01 / INCREASE</span>
-              <span class="way-symbol" aria-hidden="true">♡</span>
-            </div>
+            <span class="way-number">01 / INCREASE</span>
+            <span class="way-symbol" aria-hidden="true">♡</span>
 
             <h3>기존 후원금 증액</h3>
 
@@ -992,42 +1146,32 @@
               힘을 더해 주세요.
             </p>
 
-            <a
-              class="button button-secondary donation-link"
-              href="https://ecotownhill.github.io/maeul-eondeok-campaign/"
-            >
+            <a class="button button-secondary donation-link"
+               href="https://ecotownhill.github.io/maeul-eondeok-campaign/">
               기존 후원금 늘리기 →
             </a>
           </article>
 
-          <!-- 02 정기후원 시작 -->
           <article class="way-card">
-            <div class="way-top">
-              <span class="way-number">02 / START</span>
-              <span class="way-symbol" aria-hidden="true">🌿</span>
-            </div>
+            <span class="way-number">02 / START</span>
+            <span class="way-symbol" aria-hidden="true">🌿</span>
 
-            <h3>정기후원 시작</h3>
+            <h3>정기후원 시작 (5만원 이하)</h3>
 
             <p>
               월 5만 원 이하의 정기후원으로 마을언덕의 이웃과
               생태적인 삶을 위한 활동에 새롭게 함께해 주세요.
             </p>
 
-            <a
-              class="button button-secondary donation-link"
-              href="https://ecotownhill.github.io/maeul-eondeok-campaign/"
-            >
+            <a class="button button-secondary donation-link"
+               href="https://ecotownhill.github.io/maeul-eondeok-campaign/">
               정기후원 시작하기 →
             </a>
           </article>
 
-          <!-- 03 고액 정기후원 -->
           <article class="way-card">
-            <div class="way-top">
-              <span class="way-number">03 / GROW</span>
-              <span class="way-symbol" aria-hidden="true">✦</span>
-            </div>
+            <span class="way-number">03 / GROW</span>
+            <span class="way-symbol" aria-hidden="true">✦</span>
 
             <h3>마을언덕의 내일을 위한 고액 정기후원</h3>
 
@@ -1037,32 +1181,25 @@
               선택할 수 있습니다.
             </p>
 
-            <a
-              class="button button-secondary donation-link"
-              href="https://ecotownhill.github.io/maeul-eondeok-campaign/"
-            >
+            <a class="button button-secondary donation-link"
+               href="https://ecotownhill.github.io/maeul-eondeok-campaign/">
               고액 정기후원 알아보기 →
             </a>
           </article>
 
-          <!-- 04 약정 후원문의 -->
           <article class="way-card">
-            <div class="way-top">
-              <span class="way-number">04 / PARTNER</span>
-              <span class="way-symbol" aria-hidden="true">🤝</span>
-            </div>
+            <span class="way-number">04 / PARTNER</span>
+            <span class="way-symbol" aria-hidden="true">🤝</span>
 
-            <h3>약정 후원문의</h3>
+            <h3>약정 후원문의 (기업·법인 추천)</h3>
 
             <p>
               기업·법인 등과 함께 약정 기간과 후원 방식을 논의하며
               마을언덕의 중장기적인 변화를 만들어 갈 수 있습니다.
             </p>
 
-            <a
-              class="button button-secondary donation-link"
-              href="https://ecotownhill.github.io/maeul-eondeok-campaign/"
-            >
+            <a class="button button-secondary donation-link"
+               href="https://ecotownhill.github.io/maeul-eondeok-campaign/">
               약정 후원 문의하기 →
             </a>
           </article>
@@ -1071,7 +1208,7 @@
       </div>
     </section>
 
-    <!-- 마지막 참여 요청 -->
+    <!-- 6. 마지막 참여 요청 -->
     <section class="closing-section">
       <div class="container closing-inner">
         <div>
@@ -1088,10 +1225,8 @@
           </p>
         </div>
 
-        <a
-          class="button donation-link"
-          href="https://ecotownhill.github.io/maeul-eondeok-campaign/"
-        >
+        <a class="button donation-link"
+           href="https://ecotownhill.github.io/maeul-eondeok-campaign/">
           후원으로 함께하기 ↗
         </a>
       </div>
@@ -1107,17 +1242,15 @@
         <div>일상을 지키는 마음, 내일을 여는 약속</div>
       </div>
 
-      <a
-        class="footer-link"
-        href="https://ecotownhill.github.io/maeul-eondeok-campaign/"
-      >
+      <a class="footer-link"
+         href="https://ecotownhill.github.io/maeul-eondeok-campaign/">
         후원 신청 페이지 바로가기 ↗
       </a>
     </div>
   </footer>
 
   <script>
-    // 실제 활동 사진이 있는지 확인해 표시합니다.
+    // 실제 활동 사진이 정상적으로 불러와졌는지 확인합니다.
     const heroPhoto = document.getElementById("heroPhoto");
     const heroImage = heroPhoto.querySelector("img");
 
